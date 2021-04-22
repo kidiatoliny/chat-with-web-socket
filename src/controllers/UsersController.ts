@@ -10,7 +10,7 @@ class UsersController {
       const user = await usersService.create({ email })
       return response.json(user)
     } catch (error) {
-      return response.json(error)
+      return response.status(500).json(error)
     }
   }
 }
